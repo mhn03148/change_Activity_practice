@@ -1,5 +1,7 @@
 package com.example.change_activity_practice;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button btn_newactivity = findViewById(R.id.btn_newactivity);
+        Button btn_newactivity = (Button) findViewById(R.id.btn_newactivity);
         btn_newactivity.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -26,12 +28,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQUST_CODE_MENU);
             }
         });
-        setContentView(R.layout.map_page);
-        Button btn_gps = findViewById(R.id.btn_gps);
+
+        Button btn_gps = (Button) findViewById(R.id.btn_gps);
         btn_gps.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(getApplicationContext(), NewActivity.class);
+                Intent intent = new Intent(getApplicationContext(), map_page.class);
+                startActivity(intent); //화면전환 시작해주는 코드
             }
         });
     }
