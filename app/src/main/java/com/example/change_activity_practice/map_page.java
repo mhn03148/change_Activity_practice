@@ -12,6 +12,6 @@ public class map_page extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.map_page);
+        setContentView(R.layout.map_page);//xml파일 보여주는 코드.
     }
 }

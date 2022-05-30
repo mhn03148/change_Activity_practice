@@ -7,24 +7,33 @@
     tools:context=".MainActivity">
 
 
-
     <Button
         android:id="@+id/btn_newactivity"
-        android:layout_width="403dp"
+        android:layout_width="409dp"
         android:layout_height="52dp"
+        android:layout_marginTop="32dp"
         android:text="newactivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absluteX="0dp"
-        tools:layout_editor_absoluteY="59dp" />
-
+        tools:layout_editor_absluteX="0dp" />
 
     <Button
         android:id="@+id/btn_gps"
-        android:layout_width="403dp"
-        android:layout_height="52dp"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
         android:text="보물 지도"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_newactivity"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="280dp" />
+        tools:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintTop_toTopOf="parent" />
+
+    //버튼에 하얀색이 있으면 실제avd에서 반영이 안됨.
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
